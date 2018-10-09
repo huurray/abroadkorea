@@ -3,6 +3,6 @@ import { User } from './modules/user';
 export type Action =
   | { type: 'USER_GET', payload: User }
   | { type: 'USER_LOGOUT' }
-  | { type: 'FIRST_TARGET', payload: string }
+  | { type: 'SET_LOCATION', payload: string }
 
 

@@ -47,11 +47,15 @@ interface Props {
   siteUrl: string;
   siteIntro: string;
   siteSort: string;
-  selectVisible: (target: string) => void;
+  history: any;
 }
 
 class SmallCard extends React.Component<Props> {
   render() {
+
+
+    
+
     return (
       <React.Fragment>
         {this.props.siteUrl === undefined ? (
@@ -59,9 +63,9 @@ class SmallCard extends React.Component<Props> {
             <BackImg src={require(`./img/sites/${this.props.siteImg}.jpg`)} />
             <CategoryText>{this.props.siteName}</CategoryText>
           </Container>
-        ) : (
+        ) : ( 
           <Container
-            onClick={() => this.props.selectVisible(this.props.siteUrl)}
+            onClick={() => this.props.history.push(`/sites/${this.props.siteUrl}`)}
             data-tip={this.props.siteIntro}
           >
             <TitleBox>

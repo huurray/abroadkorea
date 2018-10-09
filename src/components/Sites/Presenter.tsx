@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import Iframe from 'react-iframe';
 
 import Nav from '../../common/Nav';
 import SmallCard from '../../common/SmallCard';
+import Iframe from '../../common/Iframe';
 
 const Container = styled.div`
   width: 100%;
@@ -28,27 +28,26 @@ const Header = styled.div`
   width: 100%;
   height: 4vh;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-left: 3rem;
+  padding-right: 3rem;
   background-color: ${props => props.theme.colors.WHITE};
   border-bottom: 1px solid ${props => props.theme.colors.GREY_LIGHT_3};
 `;
 const HeaderText = styled.p`
   ${props => props.theme.typo.p2};
 `;
-const StyledIframe = styled(Iframe)`
-  width: 100%;
-  height: 100%;
-  background-color: ${props => props.theme.colors.WHITE};
-  z-index: 99;
-`;
+
 interface P {
   on: boolean;
 }
 interface Props {
+  naviActions: any;
+  selectedLoaction: any;
+  history: any;
+  match: any;
   openNav: () => void;
-  selectVisible: (target: string) => void;
-  visibleTarget: string;
   isOpenNav: boolean;
   NA: any[];
   europe: any[];
@@ -58,12 +57,11 @@ interface Props {
   africa: any[];
 }
 
-export default class extends React.PureComponent<Props> {
+export default class extends React.Component<Props> {
   constructor(props) {
     super(props);
 
     this.siteLists = this.siteLists.bind(this);
-    this.showIframe = this.showIframe.bind(this);
   }
 
   siteLists(category) {
@@ -73,45 +71,20 @@ export default class extends React.PureComponent<Props> {
         siteImg={site.siteImg}
         siteName={site.siteName}
         siteUrl={site.siteUrl}
-        selectVisible={this.props.selectVisible}
         siteIntro={site.siteIntro}
         siteSort={site.siteSort}
+        history={this.props.history}
       />
     ));
   }
 
-  showIframe() {
-    const { visibleTarget } = this.props;
-    if (
-      visibleTarget !== '북아메리카' &&
-      visibleTarget !== '유럽' &&
-      visibleTarget !== '오세아니아' &&
-      visibleTarget !== '남아메리카' &&
-      visibleTarget !== '아시아' &&
-      visibleTarget !== '아프리카'
-    ) {
-      return (
-        <StyledIframe
-          url={visibleTarget}
-          width="100%"
-          height="96vh"
-          id="myId"
-          className="myClassname"
-          position="relative"
-          display="initial"
-          allowFullScreen
-        />
-      );
-    }
-    return false;
-  }
-
   render() {
     const {
+      match,
       isOpenNav,
       openNav,
-      selectVisible,
-      visibleTarget,
+      naviActions,
+      selectedLoaction,
       NA,
       europe,
       oceania,
@@ -119,26 +92,31 @@ export default class extends React.PureComponent<Props> {
       asia,
       africa
     } = this.props;
+
     return (
       <Container>
         <Nav
           openNav={openNav}
           isOpenNav={isOpenNav}
-          selectVisible={selectVisible}
+          naviActions={naviActions}
         />
         <SitesBox on={isOpenNav}>
           <Header>
-            <HeaderText>해외 한인 커뮤니티 ({visibleTarget})</HeaderText>
+            <HeaderText>해외 한인 커뮤니티 ({selectedLoaction})</HeaderText>
           </Header>
           <SitesList>
-            {this.showIframe()}
-
-            {visibleTarget === '북아메리카' && this.siteLists(NA)}
-            {visibleTarget === '유럽' && this.siteLists(europe)}
-            {visibleTarget === '오세아니아' && this.siteLists(oceania)}
-            {visibleTarget === '남아메리카' && this.siteLists(SA)}
-            {visibleTarget === '아시아' && this.siteLists(asia)}
-            {visibleTarget === '아프리카' && this.siteLists(africa)}
+            {match.params.siteUrl === undefined ? (
+              <>
+                {selectedLoaction === '북아메리카' && this.siteLists(NA)}
+                {selectedLoaction === '유럽' && this.siteLists(europe)}
+                {selectedLoaction === '오세아니아' && this.siteLists(oceania)}
+                {selectedLoaction === '남아메리카' && this.siteLists(SA)}
+                {selectedLoaction === '아시아' && this.siteLists(asia)}
+                {selectedLoaction === '아프리카' && this.siteLists(africa)}
+              </>
+            ) : (
+              <Iframe match={match} />
+            )}
           </SitesList>
         </SitesBox>
       </Container>

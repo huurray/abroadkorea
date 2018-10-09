@@ -10,11 +10,13 @@ import asiaDate from './data/asia';
 import africaDate from './data/africa';
 
 interface Props {
-  firstTarget: string;
+  selectedLoaction: string;
+  naviActions: any;
+  history: any;
+  match: any;
 }
 interface State {
   isOpenNav: boolean;
-  visibleTarget: string;
   NA: any[];
   europe: any[];
   oceania: any[];
@@ -29,7 +31,6 @@ export default class extends React.Component<Props, State> {
 
     this.state = {
       isOpenNav: false,
-      visibleTarget: '',
       //data
       NA: NADate,
       europe: europeDate,
@@ -40,25 +41,15 @@ export default class extends React.Component<Props, State> {
     };
 
     this.openNav = this.openNav.bind(this);
-    this.selectVisible = this.selectVisible.bind(this);
   }
 
   openNav() {
     this.setState(prevState => ({ isOpenNav: !prevState.isOpenNav }));
   }
 
-  selectVisible(target) {
-    this.setState({ visibleTarget: target });
-  }
-
-  componentDidMount() {
-    this.setState({ visibleTarget: this.props.firstTarget });
-  }
-
   render() {
     const {
       isOpenNav,
-      visibleTarget,
       NA,
       europe,
       oceania,
@@ -66,12 +57,15 @@ export default class extends React.Component<Props, State> {
       asia,
       africa
     } = this.state;
+    
     return (
       <Presenter
+        history={this.props.history}
+        naviActions={this.props.naviActions}
+        selectedLoaction={this.props.selectedLoaction}
+        match={this.props.match}
         openNav={this.openNav}
         isOpenNav={isOpenNav}
-        selectVisible={this.selectVisible}
-        visibleTarget={visibleTarget}
         NA={NA}
         europe={europe}
         oceania={oceania}

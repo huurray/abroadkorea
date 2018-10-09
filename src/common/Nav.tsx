@@ -83,8 +83,8 @@ interface P {
   on: boolean;
 }
 interface Props {
+  naviActions: any;
   openNav: () => void;
-  selectVisible: (target: string) => void;
   isOpenNav: boolean;
 }
 interface State {
@@ -109,9 +109,9 @@ class Nav extends React.Component<Props, State> {
 
   categoryList() {
     const { category } = this.state;
-    const { isOpenNav, selectVisible } = this.props;
+    const { isOpenNav, naviActions } = this.props;
     return category.map((cate, i) => (
-      <CategoryBox key={i} onClick={() => selectVisible(cate)}>
+      <CategoryBox key={i} onClick={() => naviActions.setLocation(cate)}>
         <CategoryCircle
           src={require('../common/img/circle-double.png')}
           on={isOpenNav}

@@ -58,8 +58,8 @@ class Card extends React.Component<Props> {
     return (
       <Container
         onClick={() => {
-          this.props.naviActions.setFirstTarget(this.props.target);
-          this.props.history.push('/sites');
+          this.props.naviActions.setLocation(this.props.target);
+          this.props.history.replace('/sites');
         }}
       >
         <TitleBox>

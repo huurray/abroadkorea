@@ -1,11 +1,18 @@
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as naviActions from '../../redux/modules/navi';
 
 import Container from './Container';
 
 const mapStateToProps = state => ({
-  firstTarget: state.navi.target
+  selectedLoaction: state.navi.location
+});
+
+const mapDispatchToProps = (dispatch: any) => ({
+  naviActions: bindActionCreators(naviActions, dispatch),
 });
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Container);

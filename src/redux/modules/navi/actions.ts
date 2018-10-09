@@ -1,16 +1,16 @@
 // types
 import { Action } from '../../types';
 
-export const getUserAction = (data): Action => ({
-  type: 'FIRST_TARGET',
+export const setLocationAction = (data): Action => ({
+  type: 'SET_LOCATION',
   payload: data
 });
 
 ///////////////////////////////////////////////////////
-export function setFirstTarget(target) {
+export function setLocation(location) {
   return async dispatch => {
     try {
-      dispatch(getUserAction(target));
+      dispatch(setLocationAction(location));
     } catch (err) {
       console.log(err);
     }

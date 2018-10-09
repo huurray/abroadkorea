@@ -16,7 +16,8 @@ class App extends React.Component {
       <BrowserRouter>
         <div>
           <Route exact path="/" component={Category} />
-          <Route path="/sites" component={Sites} />
+          <Route exact path="/sites" component={Sites} />
+          <Route path="/sites/:siteUrl+" component={Sites} />
           {/* <Route path="/signin" component={SignIn} /> */}
         </div>
       </BrowserRouter>
