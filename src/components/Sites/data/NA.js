@@ -1,7 +1,6 @@
-const NADate = 
-[
+const NADate = [
   {
-    siteImg: 'usa-flag',
+    siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '미국',
     siteSort: undefined,
@@ -40,7 +39,14 @@ const NADate =
     siteIntro: '미주 최대 한인 방송',
     siteName: 'Radio Korea',
     siteSort: '미국 전체',
-    siteUrl: 'radiokorea.com/'
+    siteUrl: 'radiokorea.com'
+  },
+  {
+    siteImg: 'newyorkkorea',
+    siteIntro: '뉴욕 한인 대표 커뮤니티',
+    siteName: '뉴욕 코리아',
+    siteSort: '미국 전체',
+    siteUrl: 'newyorkkorea.net'
   },
   {
     siteImg: 'kseattle',
@@ -155,7 +161,7 @@ const NADate =
     siteUrl: 'findallusa.com/'
   },
   {
-    siteImg: 'canada-flag',
+    siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '캐나다',
     siteSort: undefined,
@@ -203,6 +209,6 @@ const NADate =
     siteSort: '캐나다',
     siteUrl: 'ahaidea.com'
   }
-]
+];
 
-export default NADate
+export default NADate;

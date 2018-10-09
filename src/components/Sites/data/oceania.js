@@ -1,7 +1,6 @@
-const oceaniaDate = 
-[
+const oceaniaDate = [
   {
-    siteImg: 'aus-flag',
+    siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '호주',
     siteSort: undefined,
@@ -36,7 +35,7 @@ const oceaniaDate =
     siteUrl: 'sunbrisbane.com/korean.php'
   },
   {
-    siteImg: 'nz-flag',
+    siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '뉴질랜드',
     siteSort: undefined,
@@ -62,7 +61,7 @@ const oceaniaDate =
     siteName: '뉴질랜드 투데이',
     siteSort: '뉴질랜드',
     siteUrl: 'nztoday.net/'
-  },
-]
+  }
+];
 
-export default oceaniaDate
+export default oceaniaDate;

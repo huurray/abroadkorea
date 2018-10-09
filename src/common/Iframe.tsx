@@ -2,33 +2,74 @@ import * as React from 'react';
 import styled from 'styled-components';
 import IframeAPI from 'react-iframe';
 
+import Loading from '../common/Loading';
+
+const IframeBox = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
 const StyledIframe = styled(IframeAPI)`
   background-color: ${props => props.theme.colors.WHITE};
-  z-index: 99;
+`;
+const AbsoluteBox = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: ${props => props.theme.colors.WHITE};
+  position: absolute;
+  top: 0;
+  opacity: ${(props: P) => (props.on ? '1' : '0')};
+  transition: all 0.5s;
+`;
+const LoadingBox = styled.div`
+  ${props => props.theme.mixins.absoluteCenter};
 `;
 
+interface P {
+  on: boolean;
+}
 interface Props {
   match: any;
 }
+interface State {
+  isloading: boolean;
+}
 
-class Iframe extends React.Component<Props> {
+class Iframe extends React.Component<Props, State> {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isloading: false
+    };
+  }
+
+  componentDidMount() {
+    const offloading = () => this.setState({ isloading: false });
+    this.setState({ isloading: true });
+    setTimeout(offloading, 2500);
+  }
+
   render() {
     const { match } = this.props;
     const url = `http://${match.params.siteUrl}`;
-    
+
     return (
-      <>
+      <IframeBox>
         <StyledIframe
           url={url}
           width="100%"
           height="96vh"
-          id="myId"
-          className="myClassname"
           position="relative"
           display="initial"
           allowFullScreen
         />
-      </>
+        <AbsoluteBox on={this.state.isloading}>
+          <LoadingBox>
+            <Loading />
+          </LoadingBox>
+        </AbsoluteBox>
+      </IframeBox>
     );
   }
 }

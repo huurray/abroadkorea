@@ -1,17 +1,32 @@
-const SADate = 
-[
+const SADate = [
   {
-    siteImg: 'SA',
-    siteIntro: 'first입니다!',
-    siteName: 'first',
-    siteUrl: 'http://naver.com'
+    siteImg: 'world-map',
+    siteIntro: undefined,
+    siteName: '브라질',
+    siteSort: undefined,
+    siteUrl: undefined
   },
   {
-    siteImg: 'SA',
-    siteIntro: 'second입니다!',
-    siteName: 'second',
-    siteUrl: 'http://naver.com'
+    siteImg: 'hanintoday',
+    siteIntro: '브라질 한인 커뮤니티',
+    siteName: '투데이닷컴',
+    siteSort: '브라질',
+    siteUrl: 'hanintoday.com.br'
+  },
+  {
+    siteImg: 'world-map',
+    siteIntro: undefined,
+    siteName: '아르헨티나',
+    siteSort: undefined,
+    siteUrl: undefined
+  },
+  {
+    siteImg: 'nammihanuri',
+    siteIntro: '아르헨티나 한인 커뮤니티',
+    siteName: '남미한 우리',
+    siteSort: '아르헨티나',
+    siteUrl: 'nammihanuri.com'
   }
-]
+];
 
-export default SADate
+export default SADate;

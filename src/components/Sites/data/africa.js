@@ -1,17 +1,11 @@
-const africaDate = 
-[
+const africaDate = [
   {
-    siteImg: 'africa',
-    siteIntro: 'first입니다!',
-    siteName: 'first',
-    siteUrl: 'http://naver.com'
-  },
-  {
-    siteImg: 'africa',
-    siteIntro: 'second입니다!',
-    siteName: 'second',
-    siteUrl: 'http://naver.com'
+    siteImg: 'world-map',
+    siteIntro: undefined,
+    siteName: '아프리카',
+    siteSort: undefined,
+    siteUrl: undefined
   }
-]
+];
 
-export default africaDate
+export default africaDate;

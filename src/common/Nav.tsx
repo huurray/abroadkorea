@@ -39,6 +39,7 @@ const CategoryBox = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: ${(props: P) => props.on && '#7c899b'};
   &:hover {
     background-color: ${props => props.theme.colors.SILVER_GREY_2};
     cursor: pointer;
@@ -84,10 +85,12 @@ interface P {
 }
 interface Props {
   naviActions: any;
+  history: any;
   openNav: () => void;
   isOpenNav: boolean;
 }
 interface State {
+  isSelected: number;
   category: string[];
 }
 
@@ -96,6 +99,7 @@ class Nav extends React.Component<Props, State> {
     super(props);
 
     this.state = {
+      isSelected: 0,
       category: [
         '북아메리카',
         '유럽',
@@ -108,10 +112,18 @@ class Nav extends React.Component<Props, State> {
   }
 
   categoryList() {
-    const { category } = this.state;
-    const { isOpenNav, naviActions } = this.props;
+    const { category, isSelected } = this.state;
+    const { isOpenNav, naviActions, history } = this.props;
     return category.map((cate, i) => (
-      <CategoryBox key={i} onClick={() => naviActions.setLocation(cate)}>
+      <CategoryBox
+        key={i}
+        on={i === isSelected}
+        onClick={() => {
+          naviActions.setLocation(cate);
+          this.setState({ isSelected: i });
+          history.replace('/sites');
+        }}
+      >
         <CategoryCircle
           src={require('../common/img/circle-double.png')}
           on={isOpenNav}

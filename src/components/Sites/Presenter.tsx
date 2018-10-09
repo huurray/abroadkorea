@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
+//commons
 import Nav from '../../common/Nav';
+import Header from '../../common/Header';
 import SmallCard from '../../common/SmallCard';
 import Iframe from '../../common/Iframe';
 
@@ -18,25 +20,13 @@ const SitesBox = styled.div`
 const SitesList = styled.div`
   width: 100%;
   max-height: 96vh;
+  height: 96vh;
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-`;
-const Header = styled.div`
-  width: 100%;
-  height: 4vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  background-color: ${props => props.theme.colors.WHITE};
-  border-bottom: 1px solid ${props => props.theme.colors.GREY_LIGHT_3};
-`;
-const HeaderText = styled.p`
-  ${props => props.theme.typo.p2};
+  
+  padding: ${(props: P) => props.on && '2rem'};
 `;
 
 interface P {
@@ -65,6 +55,9 @@ export default class extends React.Component<Props> {
   }
 
   siteLists(category) {
+    // const filter = category.filter(arr => arr.siteSort === '캐나다');
+    // console.log(category);
+
     return category.map((site, i) => (
       <SmallCard
         key={i}
@@ -81,6 +74,7 @@ export default class extends React.Component<Props> {
   render() {
     const {
       match,
+      history,
       isOpenNav,
       openNav,
       naviActions,
@@ -99,12 +93,11 @@ export default class extends React.Component<Props> {
           openNav={openNav}
           isOpenNav={isOpenNav}
           naviActions={naviActions}
+          history={history}
         />
         <SitesBox on={isOpenNav}>
-          <Header>
-            <HeaderText>해외 한인 커뮤니티 ({selectedLoaction})</HeaderText>
-          </Header>
-          <SitesList>
+          <Header selectedLoaction={selectedLoaction} />
+          <SitesList on={match.params.siteUrl === undefined}>
             {match.params.siteUrl === undefined ? (
               <>
                 {selectedLoaction === '북아메리카' && this.siteLists(NA)}
