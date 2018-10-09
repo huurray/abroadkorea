@@ -18,16 +18,11 @@ const AbsoluteBox = styled.div`
   background-color: ${props => props.theme.colors.WHITE};
   position: absolute;
   top: 0;
-  opacity: ${(props: P) => (props.on ? '1' : '0')};
-  transition: all 0.5s;
 `;
 const LoadingBox = styled.div`
   ${props => props.theme.mixins.absoluteCenter};
 `;
 
-interface P {
-  on: boolean;
-}
 interface Props {
   match: any;
 }
@@ -64,11 +59,13 @@ class Iframe extends React.Component<Props, State> {
           display="initial"
           allowFullScreen
         />
-        <AbsoluteBox on={this.state.isloading}>
-          <LoadingBox>
-            <Loading />
-          </LoadingBox>
-        </AbsoluteBox>
+        {this.state.isloading && (
+          <AbsoluteBox>
+            <LoadingBox>
+              <Loading />
+            </LoadingBox>
+          </AbsoluteBox>
+        )}
       </IframeBox>
     );
   }
