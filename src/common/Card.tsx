@@ -9,6 +9,7 @@ const Container = styled.div`
   border-radius: 1.5rem;
   overflow: hidden;
   background-color: ${props => props.theme.colors.WHITE};
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   margin: 1.5%;
   cursor: pointer;
   &:hover {
