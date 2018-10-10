@@ -1,5 +1,6 @@
 const SADate = [
   {
+    protocol: undefined,
     siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '브라질',
@@ -7,6 +8,7 @@ const SADate = [
     siteUrl: undefined
   },
   {
+    protocol: 'http',
     siteImg: 'hanintoday',
     siteIntro: '브라질 한인 커뮤니티',
     siteName: '투데이닷컴',
@@ -14,6 +16,7 @@ const SADate = [
     siteUrl: 'http://hanintoday.com.br'
   },
   {
+    protocol: undefined,
     siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '아르헨티나',
@@ -21,6 +24,7 @@ const SADate = [
     siteUrl: undefined
   },
   {
+    protocol: 'http',
     siteImg: 'nammihanuri',
     siteIntro: '아르헨티나 한인 커뮤니티',
     siteName: '남미한 우리',

@@ -1,5 +1,6 @@
 const oceaniaDate = [
   {
+    protocol: undefined,
     siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '호주',
@@ -7,6 +8,7 @@ const oceaniaDate = [
     siteUrl: undefined
   },
   {
+    protocol: 'https',
     siteImg: 'hojunara',
     siteIntro: '함께하는 호주 한인포털',
     siteName: '호주나라',
@@ -14,6 +16,7 @@ const oceaniaDate = [
     siteUrl: 'https://hojunara.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'hojubada',
     siteIntro: '멜번 구인구직 및 커뮤니티',
     siteName: '호주바다',
@@ -21,6 +24,7 @@ const oceaniaDate = [
     siteUrl: 'http://hojubada.com'
   },
   {
+    protocol: 'https',
     siteImg: 'melbsky',
     siteIntro: '멜번 한인 커뮤니티',
     siteName: 'Melbourne Sky',
@@ -28,6 +32,7 @@ const oceaniaDate = [
     siteUrl: 'https://melbsky.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'sunbrisbane',
     siteIntro: '퀸즐랜드 종합생활정보싸이트',
     siteName: '썬브리즈번',
@@ -35,6 +40,7 @@ const oceaniaDate = [
     siteUrl: 'http://sunbrisbane.com/korean.php'
   },
   {
+    protocol: undefined,
     siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '뉴질랜드',
@@ -42,6 +48,7 @@ const oceaniaDate = [
     siteUrl: undefined
   },
   {
+    protocol: 'http',
     siteImg: 'nzkoreapost',
     siteIntro: '뉴질랜드 한인 커뮤니티',
     siteName: 'The Korea Post',
@@ -49,6 +56,7 @@ const oceaniaDate = [
     siteUrl: 'http://nzkoreapost.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'sundaysisa',
     siteIntro: '뉴질랜드 한인 교민신문',
     siteName: '일요시사',
@@ -56,6 +64,7 @@ const oceaniaDate = [
     siteUrl: 'http://sundaysisa.com'
   },
   {
+    protocol: 'http',
     siteImg: 'nztoday',
     siteIntro: '뉴질랜드 한인 뉴스싸이트',
     siteName: '뉴질랜드 투데이',

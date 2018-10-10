@@ -63,6 +63,7 @@ export default class extends React.Component<Props> {
     return category.map((site, i) => (
       <SmallCard
         key={i}
+        protocol={site.protocol}
         siteImg={site.siteImg}
         siteName={site.siteName}
         siteUrl={site.siteUrl}

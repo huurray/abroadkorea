@@ -47,6 +47,7 @@ class Iframe extends React.Component<Props, State> {
   }
 
   render() {
+    console.log(this.props.url)
     return (
       <IframeBox>
         <StyledIframe

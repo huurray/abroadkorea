@@ -1,5 +1,6 @@
 const europeDate = [
   {
+    protocol: undefined,
     siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '유럽 연합',
@@ -7,6 +8,7 @@ const europeDate = [
     siteUrl: undefined
   },
   {
+    protocol: 'http',
     siteImg: 'berlinreport',
     siteIntro: '독일 한인 커뮤니티',
     siteName: '베를린 리포트',
@@ -14,6 +16,7 @@ const europeDate = [
     siteUrl: 'http://berlinreport.com'
   },
   {
+    protocol: 'http',
     siteImg: 'cucucu',
     siteIntro: '오스트리아 한인 뉴스 및 커뮤니티',
     siteName: 'CUCUCU NEWS',
@@ -21,6 +24,7 @@ const europeDate = [
     siteUrl: 'http://cucucu.co.kr'
   },
   {
+    protocol: 'http',
     siteImg: 'francezone',
     siteIntro: '프랑스 한인 커뮤니티',
     siteName: 'France Zone',
@@ -28,6 +32,7 @@ const europeDate = [
     siteUrl: 'http://francezone.com'
   },
   {
+    protocol: 'http',
     siteImg: 'koreanfr',
     siteIntro: '프랑스 한인 커뮤니티',
     siteName: '프랑스 한인회',
@@ -35,6 +40,7 @@ const europeDate = [
     siteUrl: 'http://koreanfr.org'
   },
   {
+    protocol: 'http',
     siteImg: 'turkeykorean',
     siteIntro: '터키 한인 대표 커뮤니티',
     siteName: '터키 한인회 총연합',
@@ -42,6 +48,7 @@ const europeDate = [
     siteUrl: 'http://turkeykorean.com'
   },
   {
+    protocol: 'http',
     siteImg: '04uk',
     siteIntro: '영국 한인 커뮤니티',
     siteName: '영국 사랑',
@@ -49,6 +56,7 @@ const europeDate = [
     siteUrl: 'http://04uk.com'
   },
   {
+    protocol: 'http',
     siteImg: 'moskos.korean',
     siteIntro: '러시아 한인 커뮤니티',
     siteName: '러시아 한인회',

@@ -12,8 +12,11 @@ const Container = styled.a`
   margin: 1.5%;
   cursor: pointer;
   position: relative;
+  text-decoration: none;
   &:hover {
-    border: 2px solid ${props => props.theme.colors.TERTIARY} !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: ${(props: P) => (props.link ? '#FE7D7C' : '#4cab76')};
   }
 `;
 const TitleBox = styled.div`
@@ -46,13 +49,16 @@ const Content = styled.p`
 const Sort = styled.p`
   ${props => props.theme.typo.p4};
 `;
-
+interface P {
+  link: boolean;
+}
 interface Props {
   siteImg: string;
   siteName: string;
   siteUrl: string;
   siteIntro: string;
   siteSort: string;
+  protocol: string;
   history: any;
   naviActions: any;
 }
@@ -62,17 +68,33 @@ class SmallCard extends React.Component<Props> {
     return (
       <React.Fragment>
         {this.props.siteUrl === undefined ? (
-          <Container>
+          <Container link={false}>
             <BackImg src={require(`./img/sites/${this.props.siteImg}.jpg`)} />
             <CategoryText>{this.props.siteName}</CategoryText>
           </Container>
-        ) : (
+        ) : this.props.protocol === 'https' ? (
           <Container
             onClick={() => {
               this.props.history.push(`/sites/${this.props.siteImg}`);
               this.props.naviActions.setIframeURL(this.props.siteUrl);
             }}
             data-tip={this.props.siteIntro}
+            link={false}
+          >
+            <TitleBox>
+              <BackImg src={require(`./img/sites/${this.props.siteImg}.jpg`)} />
+            </TitleBox>
+            <ContentBox>
+              <Content>{this.props.siteName}</Content>
+              <Sort>{this.props.siteSort}</Sort>
+            </ContentBox>
+            <ReactTooltip place="bottom" type="warning" effect="solid" />
+          </Container>
+        ) : (
+          <Container
+            href={this.props.siteUrl}
+            data-tip={`${this.props.siteIntro} - Link`}
+            link={true}
           >
             <TitleBox>
               <BackImg src={require(`./img/sites/${this.props.siteImg}.jpg`)} />

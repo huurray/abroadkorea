@@ -1,5 +1,6 @@
 const NADate = [
   {
+    protocol: undefined,
     siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '미국',
@@ -7,34 +8,39 @@ const NADate = [
     siteUrl: undefined
   },
   {
+    protocol: 'https',
     siteImg: 'missyusa',
     siteIntro: '미주 최대 여성 커뮤니티',
     siteName: 'MissyUSA',
     siteSort: '미국 전체',
-    siteUrl: 'https://missyusa.com'
+    siteUrl: '//missyusa.com'
   },
   {
+    protocol: 'http',
     siteImg: 'koreadaily',
     siteIntro: '중앙일보 daily 뉴스',
     siteName: 'The Korea Daily',
     siteSort: '미국 전체',
-    siteUrl: 'http://koreadaily.com'
+    siteUrl: '//koreadaily.com'
   },
   {
+    protocol: 'https',
     siteImg: 'missycoupons',
     siteIntro: '미주 쇼핑 정보 제공 커뮤니티',
     siteName: 'Missy Coupons',
     siteSort: '미국 전체',
-    siteUrl: 'https://missycoupons.com/'
+    siteUrl: 'https://www.missycoupons.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'koreatimes',
     siteIntro: '미주 뉴스 KOREA TIMES',
     siteName: 'Korea Times',
     siteSort: '미국 전체',
-    siteUrl: 'http://koreatimes.com/'
+    siteUrl: 'http://www.koreatimes.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'radiokorea',
     siteIntro: '미주 최대 한인 방송',
     siteName: 'Radio Korea',
@@ -42,6 +48,7 @@ const NADate = [
     siteUrl: 'http://radiokorea.com'
   },
   {
+    protocol: 'https',
     siteImg: 'newyorkkorea',
     siteIntro: '뉴욕 한인 대표 커뮤니티',
     siteName: '뉴욕 코리아',
@@ -49,6 +56,7 @@ const NADate = [
     siteUrl: 'https://newyorkkorea.net'
   },
   {
+    protocol: 'https',
     siteImg: 'kseattle',
     siteIntro: '워싱턴주 한인 커뮤니티',
     siteName: 'Kseattle',
@@ -56,6 +64,7 @@ const NADate = [
     siteUrl: 'https://kseattle.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'seattlekcr',
     siteIntro: '시애틀 코리안 위클리',
     siteName: 'SeattleKCR',
@@ -63,6 +72,7 @@ const NADate = [
     siteUrl: 'http://seattlekcr.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'joyseattle',
     siteIntro: '가장 빠른 시애틀 뉴스',
     siteName: 'Joyseattle',
@@ -70,6 +80,7 @@ const NADate = [
     siteUrl: 'http://joyseattle.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'seattlen',
     siteIntro: '시애틀 한인 뉴스넷',
     siteName: 'Seattlen',
@@ -77,6 +88,7 @@ const NADate = [
     siteUrl: 'http://seattlen.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'radiohankook',
     siteIntro: '워싱턴주 24시 한인 라디오',
     siteName: 'Radiohankook',
@@ -84,6 +96,7 @@ const NADate = [
     siteUrl: 'http://radiohankook.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'sfkorean',
     siteIntro: '샌프란시스코 한인 커뮤니티',
     siteName: 'SFKOREAN',
@@ -91,6 +104,7 @@ const NADate = [
     siteUrl: 'http://sfkorean.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'sdsaram',
     siteIntro: '샌디에고 한인 커뮤니티',
     siteName: 'SDsaram',
@@ -98,6 +112,7 @@ const NADate = [
     siteUrl: 'http://sdsaram.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'kncolorado',
     siteIntro: '코리안 네트워크 콜로라도',
     siteName: 'KNcolorado',
@@ -105,6 +120,7 @@ const NADate = [
     siteUrl: 'http://kncolorado.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'ohmydallas',
     siteIntro: '달라스 한인 생활정보',
     siteName: 'Ohmydallas',
@@ -112,6 +128,7 @@ const NADate = [
     siteUrl: 'http://ohmydallas.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'housamo',
     siteIntro: '휴스턴 한인 커뮤니티',
     siteName: 'Housamo',
@@ -119,6 +136,7 @@ const NADate = [
     siteUrl: 'http://housamo.com'
   },
   {
+    protocol: 'https',
     siteImg: 'bostonkorea',
     siteIntro: '보스턴 한인 커뮤니티',
     siteName: 'Bostonkorea',
@@ -126,6 +144,7 @@ const NADate = [
     siteUrl: 'https://bostonkorea.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'higoodday',
     siteIntro: '아틀란타 한인 커뮤니티',
     siteName: 'HIgoodday',
@@ -133,6 +152,7 @@ const NADate = [
     siteUrl: 'http://higoodday.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'buckeyecenter',
     siteIntro: '오하이오 한인 커뮤니티',
     siteName: 'Buckeyecenter-ohio',
@@ -140,6 +160,7 @@ const NADate = [
     siteUrl: 'http://buckeyecenter.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'kflorida',
     siteIntro: '플로리다 한인 커뮤니티',
     siteName: 'Kflorida',
@@ -147,6 +168,7 @@ const NADate = [
     siteUrl: 'http://kflorida.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'detkr',
     siteIntro: '미시간 한인 커뮤니티',
     siteName: 'Detkr',
@@ -154,6 +176,7 @@ const NADate = [
     siteUrl: 'http://detkr.com/'
   },
   {
+    protocol: undefined,
     siteImg: 'world-map',
     siteIntro: undefined,
     siteName: '캐나다',
@@ -161,6 +184,7 @@ const NADate = [
     siteUrl: undefined
   },
   {
+    protocol: 'https',
     siteImg: 'koreatimescanada',
     siteIntro: '캐나다 한인 일보 및 커뮤니티',
     siteName: 'Koreatimes-canada',
@@ -168,6 +192,7 @@ const NADate = [
     siteUrl: 'https://koreatimes.net/'
   },
   {
+    protocol: 'http',
     siteImg: 'happykorea',
     siteIntro: '캐나다 한인 포탈',
     siteName: 'Happykorea',
@@ -175,6 +200,7 @@ const NADate = [
     siteUrl: 'http://happykorea.ca'
   },
   {
+    protocol: 'https',
     siteImg: 'cndreams',
     siteIntro: '앨버타주 1등 신문',
     siteName: 'CNdreams',
@@ -182,6 +208,7 @@ const NADate = [
     siteUrl: 'https://cndreams.com/'
   },
   {
+    protocol: 'https',
     siteImg: 'hanca',
     siteIntro: '몬트리올 한인 커뮤니티',
     siteName: 'Hanca',
@@ -189,6 +216,7 @@ const NADate = [
     siteUrl: 'https://hanca.com/'
   },
   {
+    protocol: 'http',
     siteImg: 'cktimes',
     siteIntro: '토론토 중앙일보 커뮤니티',
     siteName: 'CKtimes',
@@ -196,6 +224,7 @@ const NADate = [
     siteUrl: 'http://cktimes.net'
   },
   {
+    protocol: 'https',
     siteImg: 'ahaidea',
     siteIntro: '캐나다 커뮤니티 아하아이디어',
     siteName: 'Ahaidea',
