@@ -25,6 +25,7 @@ const LoadingBox = styled.div`
 
 interface Props {
   match: any;
+  url: string;
 }
 interface State {
   isloading: boolean;
@@ -46,13 +47,10 @@ class Iframe extends React.Component<Props, State> {
   }
 
   render() {
-    const { match } = this.props;
-    const url = `http://${match.params.siteUrl}`;
-
     return (
       <IframeBox>
         <StyledIframe
-          url={url}
+          url={this.props.url}
           width="100%"
           height="96vh"
           position="relative"

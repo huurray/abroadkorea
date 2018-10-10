@@ -90,13 +90,11 @@ class Header extends React.Component<Props, State> {
   onInsert() {
     const db = firebase.firestore();
     const storeRef = db.collection('suggest');
-    const success = () =>
-      this.setState(prevState => ({ successMsg: !prevState.successMsg }));
-
-    storeRef.add({ site: this.state.inputValue });
+    const success = () => this.setState(prevState => ({ successMsg: !prevState.successMsg }));
 
     this.setState({ isSuggest: false });
     if (this.state.inputValue !== '') {
+      storeRef.add({ site: this.state.inputValue });
       success();
       setTimeout(success, 3000);
     }
@@ -106,18 +104,10 @@ class Header extends React.Component<Props, State> {
     const { isSuggest, successMsg } = this.state;
     return (
       <HeaderBox>
-        <HeaderText>
-          해외 한인 커뮤니티 ({this.props.selectedLoaction})
-        </HeaderText>
-        <SuccessMsg on={successMsg}>
-          {this.state.inputValue} 를 추천하셨습니다.
-        </SuccessMsg>
+        <HeaderText>해외 한인 커뮤니티 ({this.props.selectedLoaction})</HeaderText>
+        <SuccessMsg on={successMsg}>{this.state.inputValue} 를 추천하셨습니다.</SuccessMsg>
         <SuggestBox>
-          <Input
-            on={isSuggest}
-            onChange={this.onChangeText}
-            onKeyPress={this.onPressEnter}
-          />
+          <Input on={isSuggest} onChange={this.onChangeText} onKeyPress={this.onPressEnter} />
           {isSuggest ? (
             <InputButton onClick={this.onInsert}>
               <Text>확인</Text>

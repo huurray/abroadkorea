@@ -11,35 +11,35 @@ const asiaDate = [
     siteIntro: '중국 전역 커뮤니티',
     siteName: '123123(이얼싼)',
     siteSort: '중국',
-    siteUrl: '123123.net'
+    siteUrl: 'http://www.123123.net/main/'
   },
   {
     siteImg: 'moyiza',
     siteIntro: '중국 한민족 정보의 중심',
     siteName: 'Moyiza',
     siteSort: '중국',
-    siteUrl: 'moyiza.com/'
+    siteUrl: 'http://moyiza.com/'
   },
   {
     siteImg: 'shanghaibang',
     siteIntro: '상하이 저널',
     siteName: '상하이방',
     siteSort: '중국',
-    siteUrl: 'shanghaibang.com'
+    siteUrl: 'http://shanghaibang.com'
   },
   {
     siteImg: 'zhcafe',
     siteIntro: '중국 정보 공유 네이버 카페',
     siteName: '주.정.공',
     siteSort: '중국',
-    siteUrl: 'cafe.naver.com/zhcafe/'
+    siteUrl: 'https://cafe.naver.com/zhcafe/'
   },
   {
     siteImg: 'qingdao77',
     siteIntro: '칭다오 한국인 도우미 마을',
     siteName: '칭도마',
     siteSort: '중국',
-    siteUrl: 'cafe.daum.net/qingdao77'
+    siteUrl: 'http://cafe.daum.net/qingdao77'
   },
   {
     siteImg: 'world-map',
@@ -53,21 +53,21 @@ const asiaDate = [
     siteIntro: '홍콩을 알려주는 주간 소식지',
     siteName: '홍콩수요저널',
     siteSort: '홍콩',
-    siteUrl: 'wednesdayjournal.net'
+    siteUrl: 'http://wednesdayjournal.net'
   },
   {
     siteImg: 'weeklyhk',
     siteIntro: '홍콩 주간 교민 신문',
     siteName: '위클리 홍콩',
     siteSort: '홍콩',
-    siteUrl: 'weeklyhk.com/'
+    siteUrl: 'http://weeklyhk.com/'
   },
   {
     siteImg: 'foreverhk',
     siteIntro: '천가지 표정의 홍콩 커뮤니티',
     siteName: '포에버 홍콩',
     siteSort: '홍콩',
-    siteUrl: 'cafe.naver.com/foreverhk'
+    siteUrl: 'https://cafe.naver.com/foreverhk'
   },
   {
     siteImg: 'world-map',
@@ -81,14 +81,14 @@ const asiaDate = [
     siteIntro: '일본 한인 커뮤니티',
     siteName: '일본와라',
     siteSort: '일본',
-    siteUrl: 'ilbonwara.com/'
+    siteUrl: 'http://ilbonwara.com/'
   },
   {
     siteImg: 'mirinejapan',
     siteIntro: '재일본 한국인 커뮤니티',
     siteName: '미리내 재팬',
     siteSort: '일본',
-    siteUrl: 'mirinejapan.com/'
+    siteUrl: 'http://mirinejapan.com/'
   },
   {
     siteImg: 'world-map',
@@ -102,14 +102,14 @@ const asiaDate = [
     siteIntro: '필리핀 한인 커뮤니티',
     siteName: 'Philgo',
     siteSort: '필리핀',
-    siteUrl: 'philgo.com'
+    siteUrl: 'https://philgo.com'
   },
   {
     siteImg: 'magandacafe',
     siteIntro: '필리핀 종합정보커뮤니티',
     siteName: '마간다카페',
     siteSort: '필리핀',
-    siteUrl: 'magandacafe.com'
+    siteUrl: 'https://magandacafe.com'
   },
   {
     siteImg: 'world-map',
@@ -123,14 +123,14 @@ const asiaDate = [
     siteIntro: '베트남 커뮤니티 및 투자 컨설팅',
     siteName: '비나한인',
     siteSort: '필리핀',
-    siteUrl: 'vinahanin.com'
+    siteUrl: 'http://vinahanin.com'
   },
   {
     siteImg: 'koreanhcm',
     siteIntro: '베트남 호치민 한인 커뮤니티',
     siteName: '호치민 한인회',
     siteSort: '필리핀',
-    siteUrl: 'koreanhcm.org'
+    siteUrl: 'http://koreanhcm.org'
   },
   {
     siteImg: 'world-map',
@@ -144,14 +144,14 @@ const asiaDate = [
     siteIntro: '인도네시아 한인 커뮤니티',
     siteName: 'Indoweb',
     siteSort: '인도네시아',
-    siteUrl: 'indoweb.org'
+    siteUrl: 'http://indoweb.org'
   },
   {
     siteImg: 'innekorean',
     siteIntro: '인도네시아 아름다운 한인공동체',
     siteName: '재인도네시아 한인회',
     siteSort: '인도네시아',
-    siteUrl: 'innekorean.or.id'
+    siteUrl: 'http://innekorean.or.id'
   },
   {
     siteImg: 'world-map',
@@ -165,14 +165,14 @@ const asiaDate = [
     siteIntro: '싱가포르 최대 한인 정보싸이트',
     siteName: '한국촌',
     siteSort: '싱가포르',
-    siteUrl: 'hankookchon.com'
+    siteUrl: 'http://hankookchon.com'
   },
   {
     siteImg: 'koreansingapore',
     siteIntro: '싱가포르 한인 커뮤니티',
     siteName: '싱가포르 한인회',
     siteSort: '싱가포르',
-    siteUrl: 'koreansingapore.org'
+    siteUrl: 'http://koreansingapore.org'
   },
   {
     siteImg: 'world-map',
@@ -186,7 +186,7 @@ const asiaDate = [
     siteIntro: '재태국 교민 방송 및 커뮤니티',
     siteName: '한아시아',
     siteSort: '태국',
-    siteUrl: 'hanasia.com'
+    siteUrl: 'http://hanasia.com'
   },
   {
     siteImg: 'world-map',
@@ -200,7 +200,7 @@ const asiaDate = [
     siteIntro: '재방글라데시 한인 커뮤니티',
     siteName: '방글라데시 한인회',
     siteSort: '방글라데시',
-    siteUrl: 'kor-bangladesh.com'
+    siteUrl: 'http://kor-bangladesh.com'
   },
   {
     siteImg: 'world-map',
@@ -214,7 +214,7 @@ const asiaDate = [
     siteIntro: '말레이시아 한인 커뮤니티',
     siteName: '말레이시아 한인회',
     siteSort: '말레이시아',
-    siteUrl: 'mykorean.org'
+    siteUrl: 'https://mykorean.org'
   }
 ];
 export default asiaDate;

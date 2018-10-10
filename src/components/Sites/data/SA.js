@@ -11,7 +11,7 @@ const SADate = [
     siteIntro: '브라질 한인 커뮤니티',
     siteName: '투데이닷컴',
     siteSort: '브라질',
-    siteUrl: 'hanintoday.com.br'
+    siteUrl: 'http://hanintoday.com.br'
   },
   {
     siteImg: 'world-map',
@@ -25,7 +25,7 @@ const SADate = [
     siteIntro: '아르헨티나 한인 커뮤니티',
     siteName: '남미한 우리',
     siteSort: '아르헨티나',
-    siteUrl: 'nammihanuri.com'
+    siteUrl: 'http://nammihanuri.com'
   }
 ];
 

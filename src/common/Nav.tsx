@@ -99,14 +99,7 @@ class Nav extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      category: [
-        '북아메리카',
-        '유럽',
-        '오세아니아',
-        '남아메리카',
-        '아시아',
-        '아프리카'
-      ]
+      category: ['북아메리카', '유럽', '오세아니아', '남아메리카', '아시아', '아프리카']
     };
   }
 
@@ -119,14 +112,11 @@ class Nav extends React.Component<Props, State> {
         on={i === isSelected}
         onClick={() => {
           naviActions.setLocation(cate);
-          naviActions.setNavSelect(i)
+          naviActions.setNavSelect(i);
           history.replace('/sites');
         }}
       >
-        <CategoryCircle
-          src={require('../common/img/circle-double.png')}
-          on={isOpenNav}
-        />
+        <CategoryCircle src={require('../common/img/circle-double.png')} on={isOpenNav} />
         <CategoryText on={isOpenNav}>{cate}</CategoryText>
       </CategoryBox>
     ));
@@ -142,8 +132,7 @@ class Nav extends React.Component<Props, State> {
         </Button>
         {this.categoryList()}
         <Copyright on={isOpenNav}>
-          &copy; Copyright by{' '}
-          <BlogLink href="https://huurray.github.io/">Huurray</BlogLink>. 2018
+          &copy; Copyright by <BlogLink href="https://huurray.github.io/">Huurray</BlogLink>. 2018
         </Copyright>
       </Container>
     );

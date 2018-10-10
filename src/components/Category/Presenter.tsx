@@ -18,7 +18,7 @@ const Ment = styled.div`
 
 const Content = styled.p`
   ${props => props.theme.typo.p3};
-  margin-top: 2rem;
+  margin: 2rem 0 3rem 0;
   font-weight: 700;
 `;
 const CardBox = styled.div`
@@ -28,7 +28,7 @@ const CardBox = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20rem 7% 20rem 7%;
+  padding: 16rem 7% 10rem 7%;
 `;
 interface Props {
   history: any;

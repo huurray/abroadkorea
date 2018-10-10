@@ -6,7 +6,8 @@ import Container from './Container';
 
 const mapStateToProps = state => ({
   selectedLoaction: state.navi.location,
-  isSelected: state.navi.isSelected
+  isSelected: state.navi.isSelected,
+  url: state.navi.url,
 });
 
 const mapDispatchToProps = (dispatch: any) => ({

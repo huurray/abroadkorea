@@ -1,17 +1,18 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import * as firebase from 'firebase';
 
 const Container = styled.div`
   width: 37rem;
   height: 27rem;
-  border: 1px solid #ccc;
+  border: 1px solid ${props => props.theme.colors.GREY_LIGHT_2};
   border-radius: 1.5rem;
   overflow: hidden;
   background-color: ${props => props.theme.colors.WHITE};
   margin: 1.5%;
   cursor: pointer;
   &:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
 `;
 const TitleBox = styled.div`
@@ -33,7 +34,7 @@ const ContentBox = styled.div`
   padding: 0 2rem 0 2rem;
 `;
 const Title = styled.h1`
-  ${props => props.theme.typo.eh1};
+  ${props => props.theme.typo.h1};
   ${props => props.theme.mixins.absoluteCenter};
   width: 100%;
   color: ${props => props.theme.colors.WHITE};
@@ -55,13 +56,64 @@ interface Props {
   target: string;
   naviActions: any;
 }
+interface State {
+  count: number;
+}
+class Card extends React.Component<Props, State> {
+  constructor(props) {
+    super(props);
 
-class Card extends React.Component<Props> {
+    this.state = {
+      count: 0
+    };
+  }
+  changeToNum(target) {
+    let num;
+    switch (target) {
+      case '북아메리카':
+        num = 0;
+        break;
+      case '유럽':
+        num = 1;
+        break;
+      case '오세아니아':
+        num = 2;
+        break;
+      case '남아메리카':
+        num = 3;
+        break;
+      case '아시아':
+        num = 4;
+        break;
+      case '아프리카':
+        num = 5;
+        break;
+    }
+    return num;
+  }
+
+  //firebase visitor count
+  async componentDidMount() {
+    const db = firebase.firestore();
+    const storeRef = db.collection('data').doc('count');
+    try {
+      const doc = await storeRef.get();
+      const data = doc.data();
+      if (data !== undefined) {
+        this.setState({ count: data.count });
+        storeRef.set({ count: this.state.count + 1 });
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   render() {
     return (
       <Container
         onClick={() => {
           this.props.naviActions.setLocation(this.props.target);
+          this.props.naviActions.setNavSelect(this.changeToNum(this.props.target));
           this.props.history.replace('/sites');
         }}
       >

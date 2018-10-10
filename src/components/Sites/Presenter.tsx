@@ -35,6 +35,7 @@ interface P {
 interface Props {
   naviActions: any;
   selectedLoaction: string;
+  url: string;
   isSelected: number;
   history: any;
   match: any;
@@ -68,6 +69,7 @@ export default class extends React.Component<Props> {
         siteIntro={site.siteIntro}
         siteSort={site.siteSort}
         history={this.props.history}
+        naviActions={this.props.naviActions}
       />
     ));
   }
@@ -79,6 +81,7 @@ export default class extends React.Component<Props> {
       isOpenNav,
       openNav,
       naviActions,
+      url,
       selectedLoaction,
       isSelected,
       NA,
@@ -112,7 +115,7 @@ export default class extends React.Component<Props> {
                 {selectedLoaction === '아프리카' && this.siteLists(africa)}
               </>
             ) : (
-              <Iframe match={match} />
+              <Iframe match={match} url={url} />
             )}
           </SitesList>
         </SitesBox>
