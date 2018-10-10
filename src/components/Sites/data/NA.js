@@ -13,7 +13,7 @@ const NADate = [
     siteIntro: '미주 최대 여성 커뮤니티',
     siteName: 'MissyUSA',
     siteSort: '미국 전체',
-    siteUrl: '//missyusa.com'
+    siteUrl: 'https://missyusa.com'
   },
   {
     protocol: 'http',
@@ -21,7 +21,7 @@ const NADate = [
     siteIntro: '중앙일보 daily 뉴스',
     siteName: 'The Korea Daily',
     siteSort: '미국 전체',
-    siteUrl: '//koreadaily.com'
+    siteUrl: 'http://koreadaily.com'
   },
   {
     protocol: 'https',
