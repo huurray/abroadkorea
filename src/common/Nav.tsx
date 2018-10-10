@@ -85,12 +85,12 @@ interface P {
 }
 interface Props {
   naviActions: any;
+  isSelected: number;
   history: any;
   openNav: () => void;
   isOpenNav: boolean;
 }
 interface State {
-  isSelected: number;
   category: string[];
 }
 
@@ -99,7 +99,6 @@ class Nav extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      isSelected: 0,
       category: [
         '북아메리카',
         '유럽',
@@ -112,15 +111,15 @@ class Nav extends React.Component<Props, State> {
   }
 
   categoryList() {
-    const { category, isSelected } = this.state;
-    const { isOpenNav, naviActions, history } = this.props;
+    const { category } = this.state;
+    const { isOpenNav, naviActions, history, isSelected } = this.props;
     return category.map((cate, i) => (
       <CategoryBox
         key={i}
         on={i === isSelected}
         onClick={() => {
           naviActions.setLocation(cate);
-          this.setState({ isSelected: i });
+          naviActions.setNavSelect(i)
           history.replace('/sites');
         }}
       >

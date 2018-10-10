@@ -11,6 +11,7 @@ import africaDate from './data/africa';
 
 interface Props {
   selectedLoaction: string;
+  isSelected: number;
   naviActions: any;
   history: any;
   match: any;
@@ -63,6 +64,7 @@ export default class extends React.Component<Props, State> {
         history={this.props.history}
         naviActions={this.props.naviActions}
         selectedLoaction={this.props.selectedLoaction}
+        isSelected={this.props.isSelected}
         match={this.props.match}
         openNav={this.openNav}
         isOpenNav={isOpenNav}

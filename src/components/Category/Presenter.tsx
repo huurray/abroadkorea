@@ -7,12 +7,16 @@ const Container = styled.div`
   height: 100vh;
   background-color: ${(props: any) => props.theme.colors.GREY_LIGHT_1};
 `;
-const Title = styled.h1`
-  ${props => props.theme.typo.eh1};
+const Ment = styled.div`
   position: absolute;
-  top: 10%;
+  top: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+`;
+
+const Content = styled.p`
+  ${props => props.theme.typo.p2};
 `;
 const CardBox = styled.div`
   width: 100%;
@@ -33,7 +37,12 @@ export default class extends React.PureComponent<Props> {
     const { history, naviActions } = this.props;
     return (
       <Container>
-        <Title>ABROAD KOREA</Title>
+        <Ment>
+          <Content>해외 한인 커뮤니티를 소개합니다. </Content>
+          <Content>
+            구인구직, 장터 등 활발한 커뮤니티 싸이트만 업로드 됩니다.{' '}
+          </Content>
+        </Ment>
         <CardBox>
           <Card
             imgURL="NA"

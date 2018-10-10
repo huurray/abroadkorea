@@ -5,7 +5,8 @@ import * as naviActions from '../../redux/modules/navi';
 import Container from './Container';
 
 const mapStateToProps = state => ({
-  selectedLoaction: state.navi.location
+  selectedLoaction: state.navi.location,
+  isSelected: state.navi.isSelected
 });
 
 const mapDispatchToProps = (dispatch: any) => ({

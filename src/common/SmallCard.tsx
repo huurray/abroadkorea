@@ -12,6 +12,9 @@ const Container = styled.a`
   margin: 1.5%;
   cursor: pointer;
   position: relative;
+  &:hover {
+    border: 2px solid ${props => props.theme.colors.TERTIARY} !important;
+  }
 `;
 const TitleBox = styled.div`
   width: 100%;

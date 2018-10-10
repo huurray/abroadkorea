@@ -10,6 +10,9 @@ const Container = styled.div`
   background-color: ${props => props.theme.colors.WHITE};
   margin: 1.5%;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
 `;
 const TitleBox = styled.div`
   width: 100%;

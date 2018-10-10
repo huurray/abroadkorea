@@ -5,6 +5,10 @@ export const setLocationAction = (data): Action => ({
   type: 'SET_LOCATION',
   payload: data
 });
+export const setNavSelectAction = (data): Action => ({
+  type: 'SET_NAV_SELECT',
+  payload: data
+});
 
 ///////////////////////////////////////////////////////
 export function setLocation(location) {
@@ -16,4 +20,15 @@ export function setLocation(location) {
     }
   };
 }
+
+export function setNavSelect(i) {
+  return async dispatch => {
+    try {
+      dispatch(setNavSelectAction(i));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+}
+
 

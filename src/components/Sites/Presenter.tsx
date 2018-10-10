@@ -34,7 +34,8 @@ interface P {
 }
 interface Props {
   naviActions: any;
-  selectedLoaction: any;
+  selectedLoaction: string;
+  isSelected: number;
   history: any;
   match: any;
   openNav: () => void;
@@ -79,6 +80,7 @@ export default class extends React.Component<Props> {
       openNav,
       naviActions,
       selectedLoaction,
+      isSelected,
       NA,
       europe,
       oceania,
@@ -94,7 +96,9 @@ export default class extends React.Component<Props> {
           isOpenNav={isOpenNav}
           naviActions={naviActions}
           history={history}
+          isSelected={isSelected}
         />
+        
         <SitesBox on={isOpenNav}>
           <Header selectedLoaction={selectedLoaction} />
           <SitesList on={match.params.siteUrl === undefined}>

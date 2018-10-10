@@ -40,6 +40,20 @@ const europeDate = [
     siteName: '터키 한인회 총연합',
     siteSort: '터키',
     siteUrl: 'turkeykorean.com'
+  },
+  {
+    siteImg: '04uk',
+    siteIntro: '영국 한인 커뮤니티',
+    siteName: '영국 사랑',
+    siteSort: '영국',
+    siteUrl: '04uk.com'
+  },
+  {
+    siteImg: 'moskos.korean',
+    siteIntro: '러시아 한인 커뮤니티',
+    siteName: '러시아 한인회',
+    siteSort: '러시아',
+    siteUrl: 'moskos.korean.net'
   }
 ];
 
