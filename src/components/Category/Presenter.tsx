@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Card from '../../common/Card';
+import ReactAwesomeClock from 'react-awesome-clock';
 
 const Container = styled.div`
   width: 100%;
@@ -16,7 +17,9 @@ const Ment = styled.div`
 `;
 
 const Content = styled.p`
-  ${props => props.theme.typo.p2};
+  ${props => props.theme.typo.p3};
+  margin-top: 2rem;
+  font-weight: 700;
 `;
 const CardBox = styled.div`
   width: 100%;
@@ -38,10 +41,14 @@ export default class extends React.PureComponent<Props> {
     return (
       <Container>
         <Ment>
-          <Content>해외 한인 커뮤니티를 소개합니다. </Content>
-          <Content>
-            구인구직, 장터 등 활발한 커뮤니티 싸이트만 업로드 됩니다.{' '}
-          </Content>
+          <ReactAwesomeClock
+            day={false}
+            style={{
+              color: '#444B55',
+              fontSize: 60,
+              textShadow: '0 0 5px grey'
+            }}
+          />
         </Ment>
         <CardBox>
           <Card
@@ -92,6 +99,10 @@ export default class extends React.PureComponent<Props> {
             history={history}
             naviActions={naviActions}
           />
+          <Content>
+            해외 한인 커뮤니티를 소개합니다. 구인구직, 장터 등 활발한 커뮤니티
+            싸이트만 업로드 됩니다.{' '}
+          </Content>
         </CardBox>
       </Container>
     );

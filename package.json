@@ -8,6 +8,7 @@
     "@types/redux": "^3.6.0",
     "firebase": "^5.5.2",
     "react": "^16.5.2",
+    "react-awesome-clock": "^2.0.0",
     "react-dom": "^16.5.2",
     "react-firebaseui": "^3.0.7",
     "react-iframe": "^1.3.3",

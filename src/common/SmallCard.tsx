@@ -41,7 +41,10 @@ const ContentBox = styled.div`
   background-color: ${props => props.theme.colors.GREY_LIGHT_2};
 `;
 const Content = styled.p`
-  ${props => props.theme.typo.eh3};
+  ${props => props.theme.typo.h5};
+`;
+const Sort = styled.p`
+  ${props => props.theme.typo.p4};
 `;
 
 interface Props {
@@ -76,7 +79,7 @@ class SmallCard extends React.Component<Props> {
             </TitleBox>
             <ContentBox>
               <Content>{this.props.siteName}</Content>
-              <div>{this.props.siteSort}</div>
+              <Sort>{this.props.siteSort}</Sort>
             </ContentBox>
             <ReactTooltip place="bottom" type="warning" effect="solid" />
           </Container>
