@@ -115,7 +115,7 @@ class Card extends React.Component<Props, State> {
         onClick={() => {
           this.props.naviActions.setLocation(this.props.target);
           this.props.naviActions.setNavSelect(this.changeToNum(this.props.target));
-          this.props.history.replace('/sites');
+          this.props.history.push('/sites');
         }}
       >
         <TitleBox>

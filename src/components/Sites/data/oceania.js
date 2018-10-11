@@ -13,7 +13,7 @@ const oceaniaDate = [
     siteIntro: '함께하는 호주 한인포털',
     siteName: '호주나라',
     siteSort: '호주',
-    siteUrl: 'https://hojunara.com/'
+    siteUrl: 'https://www.hojunara.com/'
   },
   {
     protocol: 'http',
