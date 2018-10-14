@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import * as firebase from 'firebase';
 
 const Container = styled.div`
   width: 37rem;
@@ -57,17 +56,8 @@ interface Props {
   target: string;
   naviActions: any;
 }
-interface State {
-  count: number;
-}
-class Card extends React.Component<Props, State> {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      count: 0
-    };
-  }
+class Card extends React.Component<Props> {
   changeToNum(target) {
     let num;
     switch (target) {
@@ -93,28 +83,14 @@ class Card extends React.Component<Props, State> {
     return num;
   }
 
-  //firebase visitor count
-  async componentDidMount() {
-    const db = firebase.firestore();
-    const storeRef = db.collection('data').doc('count');
-    try {
-      const doc = await storeRef.get();
-      const data = doc.data();
-      if (data !== undefined) {
-        this.setState({ count: data.count });
-        storeRef.set({ count: this.state.count + 1 });
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }
-
   render() {
     return (
       <Container
         onClick={() => {
           this.props.naviActions.setLocation(this.props.target);
-          this.props.naviActions.setNavSelect(this.changeToNum(this.props.target));
+          this.props.naviActions.setNavSelect(
+            this.changeToNum(this.props.target)
+          );
           this.props.history.push('/sites');
         }}
       >
