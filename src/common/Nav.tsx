@@ -39,15 +39,35 @@ const CategoryBox = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color: ${(props: P) => props.on && '#7c899b'};
-  &:hover {
-    background-color: ${props => props.theme.colors.SILVER_GREY_2};
-    cursor: pointer;
+  background-color: ${(props: P) => props.on && '#eb2f64'};
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #eb2f64;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+  }
+
+  &:hover::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
 `;
 const CategoryCircle = styled.img`
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 1.7rem;
+  height: 1.7rem;
   position: absolute;
   top: 50%;
   left: ${(props: P) => (props.on ? '10%' : '50%')};
@@ -99,7 +119,14 @@ class Nav extends React.Component<Props, State> {
     super(props);
 
     this.state = {
-      category: ['북아메리카', '유럽', '오세아니아', '남아메리카', '아시아', '아프리카']
+      category: [
+        '북아메리카',
+        '유럽',
+        '오세아니아',
+        '남아메리카',
+        '아시아',
+        '아프리카'
+      ]
     };
   }
 
@@ -116,7 +143,10 @@ class Nav extends React.Component<Props, State> {
           history.replace('/sites');
         }}
       >
-        <CategoryCircle src={require('../common/img/circle-double.png')} on={isOpenNav} />
+        <CategoryCircle
+          src={require('../common/img/circle.png')}
+          on={isOpenNav}
+        />
         <CategoryText on={isOpenNav}>{cate}</CategoryText>
       </CategoryBox>
     ));
@@ -132,7 +162,8 @@ class Nav extends React.Component<Props, State> {
         </Button>
         {this.categoryList()}
         <Copyright on={isOpenNav}>
-          &copy; Copyright by <BlogLink href="https://huurray.github.io/">Huurray</BlogLink>. 2018
+          &copy; Copyright by{' '}
+          <BlogLink href="https://huurray.github.io/">Huurray</BlogLink>. 2018
         </Copyright>
       </Container>
     );
